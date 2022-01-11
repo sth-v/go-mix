@@ -7,10 +7,20 @@ import (
 
 var a = 450
 var b = 81
+var step = -2
+
+func lambda001(n int) int {
+	return 2*n - 1
+}
+func lambda002(n int) int {
+	return 2*n + 1
+}
 
 func main() {
-	div, mod := algs.FloorDiv(a, b)
-	fmt.Printf("FloorDiv result : %v, %v\n", div, mod)
-	r := algs.Euclid(a, b)
-	fmt.Printf("Euclid result : %v\n", r)
+
+	messageE := algs.E(a, b)
+	messageI := algs.I(step, lambda001, lambda002)
+
+	fmt.Printf("E: %v\n", messageE)
+	fmt.Printf("I: %v\n", messageI)
 }
